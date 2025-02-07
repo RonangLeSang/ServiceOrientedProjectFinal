@@ -8,13 +8,13 @@ const ProductPage = React.lazy(() => import("products/ProductPage"));
 const Dashboard = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header/>
-        <main className="flex-grow p-6">
-          <Suspense fallback={<div>Loading Products...</div>}>
-            <ProductPage />
-          </Suspense>
-        </main>
-      <Footer/>
+      <Header />
+      <main className="flex-grow p-6">
+        <Suspense fallback={<div>Loading Products...</div>}>
+          <ProductPage showPlaceOrder={true} />
+        </Suspense>
+      </main>
+      <Footer />
     </div>
   );
 };
